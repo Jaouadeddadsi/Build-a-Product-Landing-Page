@@ -1,5 +1,5 @@
 body {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #eee;
   font-family: sans-serif;
 }
 
@@ -9,31 +9,243 @@ div#page-wrapper {
   width: 90%;
 }
 
-@media screen and (min-width: 480px) {
-  div#page-wrapper {
-    margin: 0 auto;
-    width: 95%;
-  }
-}
-
 #header {
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
   display: -webkit-box;
   display: flex;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
 }
 
 #logo {
-
+  align-self: center;
 }
 
 #nav-bar {
-
+ align-self: center;
 }
 
 #header-img {
   width: 300px;
   height: 50px;
+}
+
+#nav-bar ul {
+  display: -webkit-box;
+  display: flex;
+  list-style: none;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+#nav-bar li {
+  margin-right: 30px;
+}
+
+#nav-bar li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 600px) {
+  div#page-wrapper {
+    margin: 0 auto;
+    width: 95%;
+  }
+  #header {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: center;
+            justify-content: center;
+  }
+  #nav-bar ul {
+    width: 100vw;
+    display: -webkit-box;
+    display: flex;
+    list-style: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero input#email {
+  width: 250px;
+  height: 30px;
+  border: 2px solid pink;
+  border-radius: 5px;
+  box-shadow: 0px 0px 1px 1px pink,
+              -0px -0px 1px 1px pink;
+  margin-bottom: 15px;
+
+}
+
+.hero input#email::-webkit-input-placeholder {
+  padding-left: 15px;
+}
+
+.hero input#email::-moz-placeholder {
+  padding-left: 15px;
+}
+
+.hero input#email:-ms-input-placeholder {
+  padding-left: 15px;
+}
+
+.hero input#email::-ms-input-placeholder {
+  padding-left: 15px;
+}
+
+.hero input#email::placeholder {
+  padding-left: 15px;
+}
+
+.hero input[type="submit"] {
+  font-weight: bold;
+  background-color: hsla(50, 80%, 50%, 1);
+  padding: 5px 20px;
+  border: none;
+  border-radius: 2px;
+}
+
+section#features {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+.feature-element {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.text-element {
+  max-width: 700px;
+  padding-left: 70px;
+}
+
+.text-element h2 {
+  margin-bottom: -10px;
+}
+
+i {
+  color: orange;
+}
+
+section#how-it-works {
+  text-align: center;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+section#how-it-works iframe {
+  width:  560px;
+  height:  315px;
+  margin-bottom: 50px;
+}
+
+section#pricing {
+  width: 100%;
+  margin-top: 30px auto;
+  text-align: center;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+section#pricing .price-card {
+  width: 260px;
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.price-card h3 {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  font-size: 1rem;
+  padding: 15px 0px;
+  background-color: rgba(228, 221, 224, 0.84);
+}
+
+.price-card p {
+  margin-top: -5px;
+}
+
+.price-card a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 2px;
+  background-color: rgba(241, 216, 47, 1);
+  margin-bottom: 10px;
+}
+
+.price-card a:hover {
+  background-color: rgba(246, 214, 75, 1);
+}
+
+footer {
+  margin-top: 30px;
+  background-color: rgba(228, 221, 224, 0.84);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: end;
+          align-items: flex-end;
+}
+
+footer ul {
+  margin-right: 20px;
+  list-style: none;
+  margin-bottom: 0px;
+}
+
+footer li {
+  display: inline;
+  margin-right: 15px;
+}
+
+footer p {
+  margin-top: 10px;
+  margin-right: 10px;
+  color: rgba(0, 0, 0, 0.7);
 }
