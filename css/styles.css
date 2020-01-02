@@ -1,0 +1,39 @@
+body {
+  background-color: rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+}
+
+/* make the container */
+div#page-wrapper {
+  margin: 0 auto;
+  width: 90%;
+}
+
+@media screen and (min-width: 480px) {
+  div#page-wrapper {
+    margin: 0 auto;
+    width: 95%;
+  }
+}
+
+#header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#logo {
+
+}
+
+#nav-bar {
+
+}
+
+#header-img {
+  width: 300px;
+  height: 50px;
+}
